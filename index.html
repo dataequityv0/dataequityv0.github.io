@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DatasetEquity: Are All Samples Created Equal?
+        In The Quest For Equity Within Datasets.">
+  <meta name="keywords" content="deep learning, computer vision, machine learning, clustering">
+  <meta name="author" content="">
+  <title>DatasetEquity</title>
+
+  <!-- Mobile Optimization 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Global site tag (gtag.js) - Google Analytics 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <!-- CSS Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DatasetEquity: Are All Samples Created Equal?
+            In The Quest For Equity Within Datasets.</h1>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=ITPhz-cfLa"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=ITPhz-cfLa"
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- Code Link. -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="img-default" src="assets/img/data_distribution.png" data-action="zoom" data-original="assets/img/data_equity_cluster.png" alt="data_equity_cluster" width="1000"/>
+      <h2 class="subtitle has-text-centered">
+        Figure 1:   nuScenes and KITTI dataset samples projected onto a 3-dimensional t-SNE space and then clustered using DBSCAN (only first 2-dimensions are visualized). Each color represents a unique cluster ID. For nuScenes, front camera was used, whereas, for KITTI dataset, left color stereo camera image was used. <b>dataequity</b></h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Data imbalance is a well-known issue in the field of machine learning. It is caused by a variety of factors such as the cost of data collection, the difficulty of labeling, and the geographical distribution of the data. In computer vision, bias in data distribution caused by image appearance remains highly unexplored. This paper presents a novel method for addressing data imbalance in the field of machine learning, specifically in the context of 3D object detection in computer vision. The proposed method involves weighing each sample differently during training according to its likelihood of occurrence within the dataset, which improves the performance of state-of-the-art 3D object detection methods in terms of NDS and mAP scores. 
+
+            The effectiveness of the proposed loss function, called <b>Generalized Focal Loss</b>, was tested on two autonomous driving datasets using two different state-of-the-art camera-based 3D object detection methods. The results show that the loss function is particularly effective for smaller datasets and under-represented object classes. 
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> Visualization </h2>
+        <div class="content has-text-justified">
+          <p>
+            All the clustering results included in the paper have been uploaded here with image thumbnails. <b>We recommend zooming in using a touch pad for the best impact.</b> For desktop users without touch pad, one can zoom in by clicking (choosing) on the image when the zoom in cursor shows up --> Click and hold on the image --> Move while holding to see different parts of the image.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Output. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
+            <p>
+              <b>nuScenes dataset</b>
+              nuScenes is a large-scale multi-modal dataset for autonomous driving, and consists of 1000 scenes, each roughly ~20s long with key samples annotated at 2Hz, collected in Boston and Singapore. The dataset contains 6 cameras covering the full 360 degrees field-of-view and has a total of 28130 samples for training, 6019 samples for validation, and 6008 samples for testing. For the object detection task, they have 1.4M 3D bounding boxes manually annotated for 23 object classes. This dataset also provides the official evaluation metrics for the 3D object detection task and is slightly different from the one used for <b>KITTI</b> dataset. 
+            </p>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/nuscenes_training_clusters.png" data-action="zoom" data-original="assets/img/nuscenes_training_clusters.png"
+                alt="nuscenes_training_clusters" width="1000"/>
+            </div>
+        </div>
+      </div>
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+            <p>
+              <b>KITTI dataset</b>
+            KITTI 3D object detection benchmark is one of the most popular autonomous driving benchmarks and consists of 7481 training samples, and 7518 testing samples. KITTI dataset provides no validation set, however, it is common practice to split the training data into 3712 training and $3769$ validation images as proposed in , and then report validation results. This benchmark consists of $8$ different classes but evaluates only 3 classes: car, pedestrian, and cyclist. 
+            </p>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/kitti_training_clusters.png" data-action="zoom" data-original="assets/img/kitti_training_clusters.png"
+                alt="kitti_training_clusters" width="1000"/>
+            </div>
+        </div>
+      </div>
+</section>
+
+
+<!-- Output. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
+            <p>
+              Todo: Shubham to fill
+            </p>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/bdd100k_training_clusters.png" data-action="zoom" data-original="assets/img/bdd100k_training_clusters.png"
+                alt="bdd100k_training_clusters" width="1000"/>
+            </div>
+        </div>
+      </div>
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+            <p>
+              Todo: Lily to fill
+            </p>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/waymo_training_clusters.png" data-action="zoom" data-original="assets/img/waymo_training_clusters.png"
+                alt="kitti_training_clusters" width="1000"/>
+            </div>
+        </div>
+      </div>
+</section>
+
+<!-- Architecture -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- 1. -->
+      <div class="column is-four-fifths">
+        <div class="content">
+            <p>
+              High-dimensional features extracted from images are first projected down onto a lower-dimensional space (e.g. 3D) using  a method such as \texttt{t-SNE}. These features are then clustered using an algorithm such as DBSCAN to identify frames with similar semantics in the same bucket. Relative sizes of these clusters define sample likelihoods, which are further used to compute \textit{Dequity Loss Weights} to weigh errors computed during the optimization process accordingly.
+            </p>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/DatasetEquity_architecture.png" data-action="zoom" data-original="DatasetEquity_architecture.png"
+                alt="DatasetEquity_architecture" width="1000"/>
+            </div>
+        </div>
+      </div>
+</section>
+
+<!-- Data equity loss -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Data Equity Loss</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <p>
+            Generalized Focal Loss for various $\eta$ and $\gamma$}.
+          </p>
+          <div class="value-img">
+          <img id="img-default" src="assets/img/dequity_loss.png" data-action="zoom" data-original="assets/img/dequity_loss.png"
+            alt="dequity_loss" width="1000"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+     
+     
+</section> -->
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="large-font bottom_buttons" disabled>
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="large-font bottom_buttons" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+      <br />
+      <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">D-NeRF</span></a>.</p>
+      <p>Interactive feature using <a href="https://github.com/kingdido999/zooming">Zooming</a></p>
+    </div>
+  </div>
+</footer> -->
+
+<script src="build/zooming.js"></script>
+  <script>
+    const defaultZooming = new Zooming()
+    const customZooming = new Zooming()
+    const config = customZooming.config()
+    const TRANSITION_DURATION_DEFAULT = config.transitionDuration
+    const BG_COLOR_DEFAULT = config.bgColor
+    const SCALE_BASE_DEFAULT = config.scaleBase
+    const ACTIVE_CLASS = 'button-primary'
+
+    const btnFast = document.getElementById('btn-fast')
+    const btnDark = document.getElementById('btn-dark')
+    const btnScaleSmall = document.getElementById('btn-scale-small')
+
+    document.addEventListener('DOMContentLoaded', function () {
+      defaultZooming.listen('#img-default')
+      customZooming.listen('#img-custom')
+    })
+
+    btnFast.addEventListener('click', function (event) {
+      const transitionDuration = toggleActive(btnFast)
+        ? 0.2
+        : TRANSITION_DURATION_DEFAULT
+
+      customZooming.config({ transitionDuration })
+    })
+
+    btnDark.addEventListener('click', function (event) {
+      const bgColor = toggleActive(btnDark)
+        ? 'black'
+        : BG_COLOR_DEFAULT
+
+      customZooming.config({ bgColor })
+    })
+
+    btnScaleSmall.addEventListener('click', function (event) {
+      const scaleBase = toggleActive(btnScaleSmall)
+        ? 3.0
+        : SCALE_BASE_DEFAULT
+
+      customZooming.config({ scaleBase })
+    })
+
+    function isActive(el) {
+      return el.classList.contains(ACTIVE_CLASS)
+    }
+
+    function activate(el) {
+      el.classList.add(ACTIVE_CLASS)
+    }
+
+    function deactivate(el) {
+      el.classList.remove(ACTIVE_CLASS)
+    }
+
+    function toggleActive(el) {
+      if (isActive(el)) {
+        deactivate(el)
+        return false
+      } else {
+        activate(el)
+        return true
+      }
+    }
+
+    const copyright = 'Copyright © ' +
+      new Date().getFullYear() +
+      ' <a href="https://github.com/kingdido999">Pengcheng Ding</a>' +
+      ' and other <a href="https://github.com/kingdido999/zooming/graphs/contributors">contributors</a>'
+
+    document.getElementById('copyright').innerHTML = copyright
+
+  </script>
+</body>
+</html>
