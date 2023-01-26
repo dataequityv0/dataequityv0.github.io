@@ -49,7 +49,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://openreview.net/forum?id=ITPhz-cfLa"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -57,8 +57,9 @@
                   <span>Paper</span>
                 </a>
               </span>
+
               <span class="link-block">
-                <a href="https://openreview.net/forum?id=ITPhz-cfLa"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -66,7 +67,17 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
               <!-- Code Link. -->
             </div>
 
@@ -80,9 +91,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="img-default" src="assets/img/data_distribution.png" data-action="zoom" data-original="assets/img/data_equity_cluster.png" alt="data_equity_cluster" width="1000"/>
+      <img id="img-default" src="assets/img/data_distribution.png" data-action="zoom" data-original="assets/img/data_distribution.png" alt="data_distribution" width="1000"/>
       <h2 class="subtitle has-text-centered">
-        Figure 1:   nuScenes and KITTI dataset samples projected onto a 3-dimensional t-SNE space and then clustered using DBSCAN (only first 2-dimensions are visualized). Each color represents a unique cluster ID. For nuScenes, front camera was used, whereas, for KITTI dataset, left color stereo camera image was used. <b>dataequity</b></h2>
+        Figure 1:  NuScenes, KITTI, Waymo and BDD100K dataset samples projected onto a 3-dimensional t-SNE space and then clustered using DBSCAN (only first 2-dimensions are visualized). Each color represents a unique cluster ID. For nuScenes, Waymo, BDD100K, TuSimple, front camera was used, whereas, for KITTI dataset, left color stereo camera image was used. </h2>
     </div>
   </div>
 </section>
@@ -132,7 +143,7 @@
         <div class="content">
           <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
             <p>
-              <b>nuScenes dataset</b>
+              <b>nuScenes cluster: </b>
               nuScenes is a large-scale multi-modal dataset for autonomous driving, and consists of 1000 scenes, each roughly ~20s long with key samples annotated at 2Hz, collected in Boston and Singapore. The dataset contains 6 cameras covering the full 360 degrees field-of-view and has a total of 28130 samples for training, 6019 samples for validation, and 6008 samples for testing. For the object detection task, they have 1.4M 3D bounding boxes manually annotated for 23 object classes. This dataset also provides the official evaluation metrics for the 3D object detection task and is slightly different from the one used for <b>KITTI</b> dataset. 
             </p>
             <div class="value-img2">
@@ -146,7 +157,7 @@
         <div class="content">
           <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
             <p>
-              <b>KITTI dataset</b>
+              <b>KITTI cluster: </b>
             KITTI 3D object detection benchmark is one of the most popular autonomous driving benchmarks and consists of 7481 training samples, and 7518 testing samples. KITTI dataset provides no validation set, however, it is common practice to split the training data into 3712 training and $3769$ validation images as proposed in , and then report validation results. This benchmark consists of $8$ different classes but evaluates only 3 classes: car, pedestrian, and cyclist. 
             </p>
             <div class="value-img2">
@@ -167,7 +178,8 @@
         <div class="content">
           <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
             <p>
-              Todo: Shubham to fill
+              <b>BDD100K cluster: </b>
+              the BDD100K dataset contains mostly two scenarios - daylight and nighttime. Semantic clustering of this dataset also reveals two major clusters for the said frames and a few small clusters representing outlier scenarios such as high reflections from brake lights, sun flare, etc.
             </p>
             <div class="value-img2">
               <img id="img-default" src="assets/img/bdd100k_training_clusters.png" data-action="zoom" data-original="assets/img/bdd100k_training_clusters.png"
@@ -178,16 +190,32 @@
       <!-- 1. -->
       <div class="column">
         <div class="content">
-          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+          <!-- <h2 class="title is-4"> Waymo Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
             <p>
-              Todo: Lily to fill
+              <b>Waymo cluster: </b>
+              As indicated in the figure, with the visualization on most likely clusters of dataset samples, several semantic meaning cluster have formed, namely cluster 87 of city crosswalk, cluster 3 of residential driving scene after sunset, cluster 31 of crowded driving scenes, and cluster 1 of night rainy driving with glare.
             </p>
             <div class="value-img2">
-              <img id="img-default" src="assets/img/waymo_training_clusters.png" data-action="zoom" data-original="assets/img/waymo_training_clusters.png"
-                alt="kitti_training_clusters" width="1000"/>
+              <img id="img-default" src="assets/img/waymo_training_clusters_v3.png" data-action="zoom" data-original="assets/img/waymo_training_clusters_v3.png"
+                alt="waymo_training_clusters" width="1000"/>
             </div>
         </div>
       </div>
+
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4"> TuSimple Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+            <p>
+              <b>TuSimple cluster: </b>
+              TuSimple Lane detection dataset projected to a 3D T-SNE embedding space and clustered using DBSCAN algorithm (only first 2-dimensions visualized). Each color represents a unique cluster ID. The samples are semantically similar to each other in T-SNE space in the clusters as shown in this figure. It has 1 main cluster ~127K samples and 5 tiny clusters ~40 samples each
+            </p>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/tusimple_training_clusters.png" data-action="zoom" data-original="assets/img/tusimple_training_clusters.png"
+                alt="tusimple_training_clusters" width="1000"/>
+            </div>
+        </div>
+      </div>
+
 </section>
 
 <!-- Architecture -->
