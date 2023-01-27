@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <meta name="description"
         content="DatasetEquity: Are All Samples Created Equal?
@@ -22,6 +23,7 @@
 
   <!-- CSS Style
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="./static/css/slider.css">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -35,16 +37,20 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/slider.js"></script>
+
 </head>
 <body>
+
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DatasetEquity: Are All Samples Created Equal?
-            In The Quest For Equity Within Datasets.</h1>
+          <h1 class="title is-2 publication-title">DatasetEquity: Are All Samples Created Equal?</h1>
+            <h1 class="title is-3 publication-title">
+              In The Quest For Equity Within Datasets.</h1>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -88,16 +94,144 @@
   </div>
 </section>
 
+<!-- <div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths"> -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img id="img-default" src="assets/img/data_distribution.png" data-action="zoom" data-original="assets/img/data_distribution.png" alt="data_distribution" width="1000"/>
-      <h2 class="subtitle has-text-centered">
-        Figure 1:  NuScenes, KITTI, Waymo and BDD100K dataset samples projected onto a 3-dimensional t-SNE space and then clustered using DBSCAN (only first 2-dimensions are visualized). Each color represents a unique cluster ID. For nuScenes, Waymo, BDD100K, TuSimple, front camera was used, whereas, for KITTI dataset, left color stereo camera image was used. </h2>
-    </div>
-  </div>
+    <div class="columns is-centered has-text-centered">
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
+            <h2 class="title is-5">NuScenes</h2>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/nuscenes_training_clusters.gif" data-action="zoom" data-original="assets/img/nuscenes_training_clusters.gif"
+                alt="nuscenes_training_clusters_gif" width="1000"/>
+            </div>
+        </div>
+      </div>
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+            <h2 class="title is-5">KITTI</h2>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/kitti_training_clusters.gif" data-action="zoom" data-original="assets/img/kitti_training_clusters.gif"
+                alt="kitti_training_clusters_gif" width="1000"/>
+            </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
+            <h2 class="title is-5"> Waymo</h2>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/nuscenes_training_clusters.gif" data-action="zoom" data-original="assets/img/nuscenes_training_clusters.gif"
+                alt="nuscenes_training_clusters_gif" width="1000"/>
+            </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+            <h2 class="title is-5">BDD100K</h2>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/kitti_training_clusters.gif" data-action="zoom" data-original="assets/img/kitti_training_clusters.gif"
+                alt="kitti_training_clusters_gif" width="1000"/>
+            </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
+            <h2 class="title is-5">TuSimple</h2>
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/nuscenes_training_clusters.gif" data-action="zoom" data-original="assets/img/nuscenes_training_clusters.gif"
+                alt="nuscenes_training_clusters_gif" width="1000"/>
+            </div>
+        </div>
+      </div>
 </section>
 
+    <!-- <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="assets/img/nuscenes_samples.png" style="width:100%">
+        <div class="text">Nuscenes Cluster Samples</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="assets/img/kitti_samples.png" style="width:100%">
+        <div class="text">KITTI Cluster Samples </div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="assets/img/waymo_samples.png" style="width:100%">
+        <div class="text">Waymo Cluster Samples</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="assets/img/bdd100k_samples.png" style="width:100%">
+        <div class="text">BDD100K Cluster Samples</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="assets/img/tusimple_samples.png" style="width:100%">
+        <div class="text">TuSimple Cluster Samples</div>
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div> -->
+
+
+<!-- Data equity loss -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/dequity_loss.png" data-action="zoom" data-original="assets/img/dequity_loss.png"
+              alt="dequity_loss" width="1000"/>
+            </div>
+            <p>
+              <b>Generalized Focal Loss</b>
+              We propose a novel loss function called <b>Generalized Focal Loss</b>, which addresses the issue of data imbalance in computer vision by weighting each sample differently based on its likelihood of occurrence, leading to improved performance on downstream computer vision tasks. 
+            </p>
+        </div>
+      </div>
+      <!-- 1. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/dataset_equity_dd3d_top.png" data-action="zoom" data-original="assets/img/dataset_equity_dd3d_top.png"
+              alt="dataset_equity_dd3d_top" width="1000"/>
+            </div>
+            <p>
+              Comparison of BEV AP for a camera-based 3D object detection method called DD3D, with and without the proposed Generalized Focal Loss function, showing a significant improvement in performance when using the proposed loss function, particularly as the difficulty of the problem increases. 
+            </p>
+        </div>
+      </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -116,6 +250,8 @@
       </div>
     </div>
     <!--/ Abstract. -->
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -142,28 +278,28 @@
       <div class="column">
         <div class="content">
           <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
-            <p>
-              <b>nuScenes cluster: </b>
-              nuScenes is a large-scale multi-modal dataset for autonomous driving, and consists of 1000 scenes, each roughly ~20s long with key samples annotated at 2Hz, collected in Boston and Singapore. The dataset contains 6 cameras covering the full 360 degrees field-of-view and has a total of 28130 samples for training, 6019 samples for validation, and 6008 samples for testing. For the object detection task, they have 1.4M 3D bounding boxes manually annotated for 23 object classes. This dataset also provides the official evaluation metrics for the 3D object detection task and is slightly different from the one used for <b>KITTI</b> dataset. 
-            </p>
             <div class="value-img2">
               <img id="img-default" src="assets/img/nuscenes_training_clusters.png" data-action="zoom" data-original="assets/img/nuscenes_training_clusters.png"
                 alt="nuscenes_training_clusters" width="1000"/>
             </div>
+            <p>
+              <b>nuScenes cluster: </b>
+              nuScenes is a large-scale multi-modal dataset for autonomous driving, and consists of 1000 scenes, each roughly ~20s long with key samples annotated at 2Hz, collected in Boston and Singapore. The dataset contains 6 cameras covering the full 360 degrees field-of-view and has a total of 28130 samples for training, 6019 samples for validation, and 6008 samples for testing. For the object detection task, they have 1.4M 3D bounding boxes manually annotated for 23 object classes. This dataset also provides the official evaluation metrics for the 3D object detection task and is slightly different from the one used for <b>KITTI</b> dataset. 
+            </p>
         </div>
       </div>
       <!-- 1. -->
       <div class="column">
         <div class="content">
           <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
-            <p>
-              <b>KITTI cluster: </b>
-            KITTI 3D object detection benchmark is one of the most popular autonomous driving benchmarks and consists of 7481 training samples, and 7518 testing samples. KITTI dataset provides no validation set, however, it is common practice to split the training data into 3712 training and $3769$ validation images as proposed in , and then report validation results. This benchmark consists of $8$ different classes but evaluates only 3 classes: car, pedestrian, and cyclist. 
-            </p>
             <div class="value-img2">
               <img id="img-default" src="assets/img/kitti_training_clusters.png" data-action="zoom" data-original="assets/img/kitti_training_clusters.png"
                 alt="kitti_training_clusters" width="1000"/>
             </div>
+            <p>
+              <b>KITTI cluster: </b>
+            KITTI 3D object detection benchmark is one of the most popular autonomous driving benchmarks and consists of 7481 training samples, and 7518 testing samples. KITTI dataset provides no validation set, however, it is common practice to split the training data into 3712 training and $3769$ validation images as proposed in , and then report validation results. This benchmark consists of $8$ different classes but evaluates only 3 classes: car, pedestrian, and cyclist. 
+            </p>
         </div>
       </div>
 </section>
@@ -177,46 +313,47 @@
       <div class="column">
         <div class="content">
           <!-- <h2 class="title is-4">Stage 2 BDD100K Clustering Output for C<sup>2</sup><sub>1</sub></h2> -->
-            <p>
-              <b>BDD100K cluster: </b>
-              the BDD100K dataset contains mostly two scenarios - daylight and nighttime. Semantic clustering of this dataset also reveals two major clusters for the said frames and a few small clusters representing outlier scenarios such as high reflections from brake lights, sun flare, etc.
-            </p>
             <div class="value-img2">
               <img id="img-default" src="assets/img/bdd100k_training_clusters.png" data-action="zoom" data-original="assets/img/bdd100k_training_clusters.png"
                 alt="bdd100k_training_clusters" width="1000"/>
             </div>
+            <p>
+              <b>BDD100K cluster: </b>
+              the BDD100K dataset contains mostly two scenarios - daylight and nighttime. Semantic clustering of this dataset also reveals two major clusters for the said frames and a few small clusters representing outlier scenarios such as high reflections from brake lights, sun flare, etc.
+            </p>
         </div>
       </div>
       <!-- 1. -->
       <div class="column">
         <div class="content">
           <!-- <h2 class="title is-4"> Waymo Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
-            <p>
-              <b>Waymo cluster: </b>
-              As indicated in the figure, with the visualization on most likely clusters of dataset samples, several semantic meaning cluster have formed, namely cluster 87 of city crosswalk, cluster 3 of residential driving scene after sunset, cluster 31 of crowded driving scenes, and cluster 1 of night rainy driving with glare.
-            </p>
             <div class="value-img2">
               <img id="img-default" src="assets/img/waymo_training_clusters_v3.png" data-action="zoom" data-original="assets/img/waymo_training_clusters_v3.png"
                 alt="waymo_training_clusters" width="1000"/>
             </div>
+            <p>
+              <b>Waymo cluster: </b>
+              As indicated in the figure, with the visualization on most likely clusters of dataset samples, several semantic meaning cluster have formed, namely cluster 87 of city crosswalk, cluster 3 of residential driving scene after sunset, cluster 31 of crowded driving scenes, and cluster 1 of night rainy driving with glare.
+            </p>
         </div>
       </div>
 
       <div class="column">
         <div class="content">
           <!-- <h2 class="title is-4"> TuSimple Clustering Output for C<sup>2</sup><sub>0</sub></h2> -->
-            <p>
-              <b>TuSimple cluster: </b>
-              TuSimple Lane detection dataset projected to a 3D T-SNE embedding space and clustered using DBSCAN algorithm (only first 2-dimensions visualized). Each color represents a unique cluster ID. The samples are semantically similar to each other in T-SNE space in the clusters as shown in this figure. It has 1 main cluster ~127K samples and 5 tiny clusters ~40 samples each
-            </p>
             <div class="value-img2">
               <img id="img-default" src="assets/img/tusimple_training_clusters.png" data-action="zoom" data-original="assets/img/tusimple_training_clusters.png"
                 alt="tusimple_training_clusters" width="1000"/>
             </div>
+            <p>
+              <b>TuSimple cluster: </b>
+              TuSimple Lane detection dataset projected to a 3D T-SNE embedding space and clustered using DBSCAN algorithm (only first 2-dimensions visualized). Each color represents a unique cluster ID. The samples are semantically similar to each other in T-SNE space in the clusters as shown in this figure. It has 1 main cluster ~127K samples and 5 tiny clusters ~40 samples each
+            </p>
         </div>
       </div>
-
 </section>
+
+
 
 <!-- Architecture -->
 <section class="section">
@@ -224,40 +361,117 @@
     <div class="columns is-centered has-text-centered">
       <!-- 1. -->
       <div class="column is-four-fifths">
+        <h2 class="title is-3"> Architecture </h2>
         <div class="content">
-            <p>
-              High-dimensional features extracted from images are first projected down onto a lower-dimensional space (e.g. 3D) using  a method such as \texttt{t-SNE}. These features are then clustered using an algorithm such as DBSCAN to identify frames with similar semantics in the same bucket. Relative sizes of these clusters define sample likelihoods, which are further used to compute \textit{Dequity Loss Weights} to weigh errors computed during the optimization process accordingly.
-            </p>
             <div class="value-img2">
-              <img id="img-default" src="assets/img/DatasetEquity_architecture.png" data-action="zoom" data-original="DatasetEquity_architecture.png"
+              <img id="img-default" src="assets/img/DatasetEquity_architecture.png" data-action="zoom" data-original="assets/img/DatasetEquity_architecture.png"
                 alt="DatasetEquity_architecture" width="1000"/>
             </div>
+            <p>
+              High-dimensional features extracted from images are first projected down onto a lower-dimensional space (e.g. 3D) using  a method such as t-SNE. These features are then clustered using an algorithm such as DBSCAN to identify frames with similar semantics in the same bucket. Relative sizes of these clusters define sample likelihoods, which are further used to compute <b>Dequity Loss Weights</b> to weigh errors computed during the optimization process accordingly.
+            </p>
         </div>
       </div>
 </section>
 
-<!-- Data equity loss -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
+      <!-- 1. -->
       <div class="column is-four-fifths">
-        <h2 class="title is-4">Data Equity Loss</h2>
+      <h2 class="title is-3"> Cluster Distribution </h2>
+
+      <img id="img-default" src="assets/img/data_distribution.png" data-action="zoom" data-original="assets/img/data_distribution.png" alt="data_distribution" width="1000"/>
+      <p>
+        Samples cluster scaled probabilities for KITTI, nuScenes, Waymo, BDD100K dataset. </h2>
+      </p>
       </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <p>
-            Generalized Focal Loss for various $\eta$ and $\gamma$}.
-          </p>
-          <div class="value-img">
-          <img id="img-default" src="assets/img/dequity_loss.png" data-action="zoom" data-original="assets/img/dequity_loss.png"
-            alt="dequity_loss" width="1000"/>
-        </div>
-      </div>
-    </div>
   </div>
+</div>
 </section>
+
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="content">
+                <h2 class="title is-6">NuScenes Cluster Samples</h2>
+                <div class="value-img2">
+                  <img id="img-default" src="assets/img/nuscenes_samples.png" data-action="zoom" data-original="assets/img/nuscenes_samples.png"
+                    alt="nuscenes_samples" width="1000"/>
+                </div>
+            </div>
+          </div>
+      
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-6">KITTI Cluster Samples</h2>
+              <div class="value-img2">
+                <img id="img-default" src="assets/img/kitti_samples.png" data-action="zoom" data-original="assets/img/kitti_samples.png"
+                  alt="kitti_samples" width="1000"/>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+                <h2 class="title is-6"> Waymo Cluster Samples</h2>
+                <div class="value-img2">
+                  <img id="img-default" src="assets/img/waymo_samples.png" data-action="zoom" data-original="assets/img/waymo_samples.png"
+                    alt="waymo_samples" width="1000"/>
+                </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+                <h2 class="title is-6">BDD100K Cluster Samples</h2>
+                <div class="value-img2">
+                  <img id="img-default" src="assets/img/bdd100k_samples.png" data-action="zoom" data-original="assets/img/bdd100k_samples.png"
+                    alt="bdd100k_samples" width="1000"/>
+                </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+                <h2 class="title is-6">TuSimple Cluster Samples</h2>
+                <div class="value-img2">
+                  <img id="img-default" src="assets/img/tusimple_samples.png" data-action="zoom" data-original="assets/img/tusimple_samples.png"
+                    alt="tusimple_samples" width="1000"/>
+                </div>
+            </div>
+          </div>
+    </section>
+
+
+
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- 1. -->
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> Downstream Task Improvements</h2>
+        <div class="content">
+            <div class="value-img2">
+              <img id="img-default" src="assets/img/table.png" data-action="zoom" data-original="assets/img/table.png"
+                alt="table" width="1000"/>
+            </div>
+            <p>
+              <b>3D detection results on KITTI test set.</b> The suffix DE signifies our method of applying <b>Generalized Focal Loss</b> weights to each sample. Best results are highlighted in bold. Value of eta and gamma in the Generalized Focal Loss weight was set to 1.0, and 5.0 respectively. Class@N in this table refers to the AP|R40 score computed for Class at an IoU threshold of N.
+            </p>
+        </div>
+        <!-- <div class="column is-four-fifths"> -->
+          <img id="img-default" src="assets/img/qualitative.png" data-action="zoom" data-original="assets/img/qualitative.png" alt="qualitative" width="1000"/>
+          <p>
+            Qualitative analysis of predictions from the baseline DD3D-DE model and our DD3D-DE model. The samples shown here were randomly drawn from the split of the KITTI test split. 
+            As shown in the images, DD3D-DE improves the performance over the baseline model on under-represented, and out-of-distribution samples containing objects such as Van, Cyclist, and occluded or far away Car.
+          </h2>
+          </p>
+          <!-- </div> -->
+      </div>
+</section>
+
 
 <!-- <section class="section">
   <div class="container is-max-desktop">
